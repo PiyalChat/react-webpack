@@ -1,15 +1,17 @@
-import "./styles.css";
-import IMAGE from "./react.png";
-import VITE from './vite.svg'
+import './styles.css'
+import IMAGE from './react.png'
+import ClickCounter from './ClickCounter'
 
-type Props = {};
-
-export const App = (props: Props) => {
+export const App = () => {
   return (
     <>
-      <h2>React webpack learnings</h2>
-      <img src={IMAGE} alt="react-logo"/>
-      <img src={VITE} alt="vite-logo"/>
+      <h1>React webpack learnings</h1>
+      <h3>
+        Rendering the env {process.env.NODE_ENV} {process.env.name} on visit
+      </h3>
+      <img src={IMAGE} alt="react-logo" />
+
+      <ClickCounter />
     </>
-  );
-};
+  )
+}
